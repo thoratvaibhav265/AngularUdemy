@@ -19,6 +19,52 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "public/assets/images",
+              {
+                "glob": "favicon.ico",
+                "input": "public",
+                "output": "/"
+              },
+              {
+                "glob": "index.html",
+                "input": "public",
+                "output": "/"
+              },
+              {
+                "glob": "**/*.svg",
+                "input": "public/assets/images",
+                "output": "/assets/images"
+              },
+              {
+                "glob": "**/*.png",
+                "input": "public/assets/images",
+                "output": "/assets/images"
+              },
+              {
+                "glob": "**/*.jpg",
+                "input": "public/assets/images",
+                "output": "/assets/images"
+              },
+              {
+                "glob": "**/*.jpeg",
+                "input": "public/assets/images",
+                "output": "/assets/images"
+              },
+              {
+                "glob": "**/*.gif",
+                "input": "public/assets/images",
+                "output": "/assets/images"
+              },
+              {
+                "glob": "**/*.webp",
+                "input": "public/assets/images",
+                "output": "/assets/images"
+              },
+              {
+                "glob": "**/*.ico",
+                "input": "public/assets/images",
+                "output": "/assets/images"
+              },
               {
                 "glob": "**/*",
                 "input": "public"
