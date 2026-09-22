@@ -1,14 +1,17 @@
 
 import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
-
+import { User } from './user/user';
+import { DUMMY_USERS } from './dummy_data/dummy-users';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.html',  
     standalone: true,
-    imports: [HeaderComponent]
+    styleUrls: ['./app.css'],
+    imports: [HeaderComponent,User]
 })
 export class App{
 
+    users = DUMMY_USERS;
 }
