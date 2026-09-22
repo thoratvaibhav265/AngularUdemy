@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 // './' ka matlab hai current folder (user folder) ke andar dekhna
 import { DUMMY_USERS } from '../dummy_data/dummy-users';
 
-const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
 
 @Component({
   selector: 'app-user',
@@ -12,9 +11,13 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
   styleUrl: './user.css',
 })
 export class User {
-  selectedUser=DUMMY_USERS[randomIndex];
+  @Input() avatar!:string;
 
-  get imagePath(){
-    return 'assets/images/users/' + this.selectedUser.avatar;
+  @Input() name!:string;
+
+  get imagePath(): string {
+    return 'assets/images/users/' + this.avatar;
   }
+
+  onSelectuser() {}
 }
